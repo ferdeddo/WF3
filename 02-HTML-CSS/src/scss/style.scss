@@ -13,7 +13,7 @@ html{
 ---------------------------------------------------*/
 body{
     background-color: lightgray;
-    background: url(../img/back.png);
+    background: url(../../dist/img/back.png);
     
 }
 
@@ -57,26 +57,26 @@ main{
 header{
     width: 100%;
     height: 200px;
-    background:url(../img/banPlan\ de\ travail\ 1.svg);
+    background:url(../../dist/img/banPlan.svg);
     background-size: cover;
     position: relative;
-    
+    img{
+        position: absolute;
+        margin-top: 2rem;
+    }
+    h2{
+        position: absolute;
+        float: right;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        padding-top: 8rem;
+        padding-left: 17rem;
+        font-size: 2rem;
+      
+      }
 }
 
-header img{
-    position: absolute;
-    margin-top: 2rem;
-}
-header h2{
-  position: absolute;
-  float: right;
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  padding-top: 8rem;
-  padding-left: 17rem;
-  font-size: 2rem;
 
-}
 
 nav{
     text-align: center;
@@ -84,34 +84,33 @@ nav{
     text-transform: uppercase;
     background-color: rgb(255, 187, 0);
     font-size: 2rem;
-    
-}
-
-nav ul{
-    padding: 0%;
-    margin: 0%; 
-}
-
-nav li{
-    display: inline-block;
-}
-nav li a{
-    color: black;
-    text-decoration: none;
-    padding: 1.4rem 1.6rem;
-}
-
-nav li a:hover{
-    color: white;
-    font-weight: bold;
-    background-color: rgb(255, 187, 0);
-}
-
-nav .current a{
+    ul{
+        padding: 0%;
+        margin: 0%;
+        li{
+            display: inline-block;
+            a{
+                color: black;
+                text-decoration: none;
+                padding: 1.4rem 1.6rem;
+                &:hover{
+                    color: white;
+                    font-weight: bold;
+                    background-color: rgb(255, 187, 0);
+                }
+            }
+        } 
+    }
+    .current a{
     color: aliceblue;
     font-weight: bold;
     background-color:#231F20;
 }
+
+}
+
+
+
 
 /*-----------------------------
             section
@@ -121,54 +120,48 @@ section{
     /*dimension et positionnement*/
     width: 100%;
     float: left;
+    h1{
+        text-align: center;
+        background-color: #231F20;
+        color: white;
+        font-size: 4rem;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 3rem;
+        
     
-}
-
-section h1{
-    text-align: center;
-    background-color: #231F20;
-    color: white;
-    font-size: 4rem;
-    font-family: 'Ubuntu', sans-serif;
-    padding: 3rem;
+    }
+    aside{
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 1rem;
+        img{
+            max-width: 100%;
+        }
+    }
+    article{
+        float: left;
+        width: 50%;
+        padding: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.5rem;
     
-
+    }
+    h2{
+        color: rgb(255, 187, 0);
+        font-family: 'Ubuntu', sans-serif;
+        text-shadow:1px 1px  #231F20;
+    }
+    .liresuite{
+        text-decoration: none;
+        color: rgb(224, 166, 4);
+        border: 1px solid,
+    }
 }
 
-section aside{
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-    padding: 1rem;
-}
 
-section aside img{
-    max-width: 100%;
-}
-
-section article{
-    float: left;
-    width: 50%;
-    padding: 1rem;
-    text-align: justify;
-    text-justify: inter-word;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.5rem;
-
-}
-
-section h2{
-    color: rgb(255, 187, 0);
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow:1px 1px  #231F20;
-}
-
-.liresuite{
-    text-decoration: none;
-    color: rgb(224, 166, 4);
-    border: 1px solid,
-    
-}
 /*---------------------------------------------------
                         Footer
 ----------------------------------------------------*/
@@ -181,89 +174,84 @@ footer{
     border-top-width: medium;
     background-color: #231F20;
     padding: 2rem;
+    section{
+        font-size: 1.5rem;
+        
+    }
+    .gmap{
+        width: calc(100% / 3);
+        float: left;
+        height: 200px;
+    }
+    
+                /* Ma newsletter */
+    .newsletter{
+        width: calc( (100% / 3) - 4rem);
+        margin-left: 4rem;
+        float: left;
+        fieldset{
+            font-family: 'Roboto Condensed', sans-serif;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            border: .2rem solid #FFF;
+            color: #FFF;
+            height: 160px;
+            
+        }
+        input{
+            width: calc(100% - 2rem);
+            height: 2.5rem;
+            border: 0;
+            margin-bottom: .5rem;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+        }
+        form input[type=submit] {
+            width: 100%;
+            height: 3rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            background-color:  rgb(255, 187, 0);
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        
+
+    }
+    .contact{
+        width: calc(100% / 3);
+        float: left;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        
+       
+    }
+    address {
+        color: #FFF;
+        font-style: normal;
+        text-align: center;
+        a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 1.6rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    h3{
+        color: white;
+    }
+    address strong {
+        font-size: 2rem;
+    }
 }
 
-footer section{
-    font-size: 1.5rem;
-}
 
-.gmap{
-    width: calc(100% / 3);
-    float: left;
-    height: 200px;
-}
 
-            /* Ma newsletter */
-.newsletter{
-    width: calc( (100% / 3) - 4rem);
-    margin-left: 4rem;
-    float: left;
-}
-
-footer fieldset{
-    font-family: 'Roboto Condensed', sans-serif;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    border: .2rem solid #FFF;
-    color: #FFF;
-    height: 160px;
-}
-
-footer input{
-    width: calc(100% - 2rem);
-    height: 2.5rem;
-    border: 0;
-    margin-bottom: .5rem;
-    padding: .5rem 1rem;
-    border-radius: 5px;
-}
-
-form input[type=submit] {
-    width: 100%;
-    height: 3rem;
-    font-size: 1.6rem;
-    font-weight: bold;
-    cursor: pointer;
-    background-color:  rgb(255, 187, 0);
-    border-radius: 5px;
-    margin-top: 1rem;
-}
 
             /* Coordonnées de contact */
-
-.contact{
-    width: calc(100% / 3);
-    float: left;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-   
-}
-
-footer address {
-    color: #FFF;
-    font-style: normal;
-    text-align: center;
-}
-
-footer h3{
-    color: white;
-}
-
-footer address strong {
-    font-size: 2rem;
-}
-
-footer address a {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 1.6rem;
-}
-
-footer address a:hover {
-    text-decoration: underline;
-}
-
-
 
 
 

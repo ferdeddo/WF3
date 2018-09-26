@@ -7,10 +7,8 @@
     <!-- permet de préciser l'encodage de la page, pour les accents -->
     <meta charset=utf-8>
 
-    <!-- normalize.css https://necolas.github.io/normalize.css/ -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <!-- j'importe ma feuile de style.css après normalize.css -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- j'importe ma feuile de style.css compilée depuis SCSS -->
+    <link rel="stylesheet" href="./dist/css/style.min.css">
 
     <!-- Titre de ma page -->
     <title>Atelier 01- HTML et CSS</title>
@@ -22,7 +20,7 @@
         <!-- en-tête du site -->
         <header>
            <a href="index.html"> 
-               <img src="img/logo.png"  width="160" height="160" alt="logo erwi">
+               <img src="./dist/img/logo.png"  width="160" height="160" alt="logo erwi">
            </a>
            <h2>Pour la petite histoire</h2>
            
@@ -44,7 +42,7 @@
             <h1>Les Pirates</h1>
 
             <aside>
-                 <img src="img/pirate.jpg"  width="445" height="270" alt="illustration pirate"> 
+                 <img src="./dist/img/pirate.jpg"  width="445" height="270" alt="illustration pirate"> 
             </aside>
 
             <article>
