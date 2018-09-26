@@ -1,0 +1,36 @@
+/*---------------------------------------------------
+                 header | Mise en page de nav
+-----------------------------------------------------
+    1 - Tous les liens sont en noir
+    2 - Les liens ne sont pas soulignés
+    3 - Ils sont affichés en ligne grace à la propriété "display"
+    4 - Ils sont centré sur la page 
+    5 - Vous pouvez attribuer une couleur au passage de la souris
+    6 - pareil pour la class "current"
+    7 - vous utilisez une police différente.
+---------------------------------------------------*/
+
+
+header{
+    width: 100%;
+    height: 200px;
+    background:url(../../dist/img/banPlan.svg);
+    background-size: cover;
+    position: relative;
+    img{
+        position: absolute;
+        margin-top: 2rem;
+    }
+    h2{
+        position: absolute;
+        float: right;
+        font-family: $ff-primary;
+        color: white;
+        padding-top: 8rem;
+        padding-left: 17rem;
+        font-size: 2rem;
+      
+      }
+}
+
+

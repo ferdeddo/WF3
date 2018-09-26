@@ -1,0 +1,49 @@
+
+/*-----------------------------
+            section
+----------------------------*/
+
+section{
+    /*dimension et positionnement*/
+    width: 100%;
+    float: left;
+    h1{
+        text-align: center;
+        background-color: $color-secondary;
+        color: white;
+        font-size: 4rem;
+        font-family: $ff-primary;
+        padding: 3rem;
+        
+    
+    }
+    aside{
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 1rem;
+        img{
+            max-width: 100%;
+        }
+    }
+    article{
+        float: left;
+        width: 50%;
+        padding: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: $ff-primary;
+        font-size: 1.5rem;
+    
+    }
+    h2{
+        color: $color-primary;
+        font-family: $ff-primary;
+        text-shadow:1px 1px  $color-secondary;
+    }
+    .liresuite{
+        text-decoration: none;
+        color: $color-primary;
+        border: 1px solid,
+    }
+}

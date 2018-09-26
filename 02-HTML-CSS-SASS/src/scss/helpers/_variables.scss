@@ -1,5 +1,4 @@
-
-
+//variables
 /*
     déclarer une variable en SASS
     NB : C'est vous qui choisissez votre convention de nommage. Adopter une convention qui
@@ -15,13 +14,13 @@ $color-secondary:#231F20;
     La fonction "darken" me permet de faire la même chose mais en sens inverse.
 */
 
-$clr-gray-base: #000;
+/*$clr-gray-base: #000;
 $clr-gray-dark: lighten($clr-gray-base, 20%);
 $clr-gray: lighten($clr-graybase, 50%);
 $clr-gray-light: lighten($clr-graybase, 70%);
 $clr-gray-lighter: lighten($clr-graybase, 90%);
 $clr-gray-lightest: lighten($clr-graybase, 95%);
-
+*/
 //varibles Fonts
 
 $ff-primary: 'Ubuntu', sans-serif;
