@@ -1,3 +1,12 @@
+
+$color-primary:rgb(255, 187, 0);
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*---------------------------------------------------
+    Je souhaite changer la couleur du fond de ma page
+---------------------------------------------------*/
 html{
     font-size: 62.5%;
     /*1rem=10px*/
@@ -6,11 +15,6 @@ html{
 * {
     box-sizing: border-box;
 }
-
-
-/*---------------------------------------------------
-    Je souhaite changer la couleur du fond de ma page
----------------------------------------------------*/
 body{
     background-color: lightgray;
     background: url(../../dist/img/back.png);
@@ -51,8 +55,7 @@ main{
     6 - pareil pour la class "current"
     7 - vous utilisez une police différente.
 ---------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 
 header{
     width: 100%;
@@ -82,7 +85,7 @@ nav{
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
-    background-color: rgb(255, 187, 0);
+    background-color: $color-primary;
     font-size: 2rem;
     ul{
         padding: 0%;
@@ -96,7 +99,7 @@ nav{
                 &:hover{
                     color: white;
                     font-weight: bold;
-                    background-color: rgb(255, 187, 0);
+                    background-color: $color-primary;
                 }
             }
         } 
@@ -150,13 +153,13 @@ section{
     
     }
     h2{
-        color: rgb(255, 187, 0);
+        color: $color-primary;
         font-family: 'Ubuntu', sans-serif;
         text-shadow:1px 1px  #231F20;
     }
     .liresuite{
         text-decoration: none;
-        color: rgb(224, 166, 4);
+        color: $color-primary;
         border: 1px solid,
     }
 }
@@ -212,7 +215,7 @@ footer{
             font-size: 1.6rem;
             font-weight: bold;
             cursor: pointer;
-            background-color:  rgb(255, 187, 0);
+            background-color:  $color-primary;
             border-radius: 5px;
             margin-top: 1rem;
         }
