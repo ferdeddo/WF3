@@ -1,0 +1,52 @@
+header{
+    width: 100%;
+    height: 200px;
+    background:url(../../../dist/img/banniere.png);
+   
+    
+  
+    position: relative;
+    img{
+        position: absolute;
+        margin-top: 2rem;
+        margin-left: 8.8rem;
+    }
+    
+      nav{
+        float: right;
+        margin-top: 8rem;
+        margin-right: 5rem;
+        text-align: center;
+        font-family: $ff-primary;
+        text-transform: uppercase;
+        font-size: 2rem;
+        ul{
+            
+            li{
+                display: inline-block;
+                margin-left: 2rem;
+                a{
+                    color: white;
+                    background-color:#764234;
+                    border: 1px solid;
+                    border-color: #CC9933;
+                    border-radius: 1rem;
+                    text-decoration: none;
+                    padding: 2rem 2rem;
+                    &:hover{
+                        color: white;
+                        font-weight: bold;
+                        background-color: #CC9933;
+                    }
+                }
+            } 
+        }
+        .current a{
+        color: aliceblue;
+        font-weight: bold;
+        background-color:$color-secondary;
+    }
+    
+    }
+}
+

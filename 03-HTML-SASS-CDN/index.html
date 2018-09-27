@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- permet de préciser l'encodage de la page, pour les accents -->
+    <meta charset=utf-8>
+
+    <!-- j'importe ma feuile de style.css compilée depuis SCSS -->
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+
+    <!-- Titre de ma page -->
+    <title>Atelier 03- HTML-SASS-CDN</title>
+</head>
+
+<!--dans"body",le contenu de notre page-->
+<body>
+    <div class="page">
+
+        <!-- en-tête du site -->
+        <p class="phrase_accroche"><strong> Un café sensationnel à chaque tasse.</strong></p>
+
+        <!-- espace clients -->
+        <div class="topheader">
+            <ul>
+                    <li> Espace Clients: </li>
+                    <li><a href="#">Connexion </a></li>
+                    <li> | </li>
+                    <li><a href="#">inscription </a></li>
+            </ul>
+        </div>
+
+        <!-- bannière et barre de navigation -->
+        <header>
+           <a href="index.html"> 
+               <img src="./dist/img/logoCafé.svg"  width="160" height="160" alt="logo erwi">
+           </a>
+          
+           <nav>
+
+            <ul>
+                <li class="current"><a href="index.html">accueil </a> </li>
+                <li><a href="#">Présentation </a></li>
+                <li><a href="#">Contact </a></li>
+            </ul>
+        </nav>
+
+
+        </header>
+        </div>
+
+        <!-- raccourci Emmet: nav<ul<li*3<a[href=#]{lien $$} -->
+       
+         <a href="#">
+             <img src="./dist/img/projecteur3.svg" alt="grand image café" id="projecteur" >  
+         </a>
+       
+
+        <!-- contenu du site -->
+        <div class="page">
+        <section >
+            <aside>
+                 <img src="./dist/img/aside.jpg"  width="400" height="300" alt="illustration pirate"> 
+            </aside>
+
+            <article>
+                <p>Quoi de mieux qu'un bon café italien pour la lecture ?</p>
+                <h2>Le café italien</h2>
+                <p>En effet il a été prouvé scientifiquement, que le café fait à l'italienne, accroit 
+                    la concentration, est à des vertus sur la mémoire </p>
+                <p>Le café italien est bu sur toute la planète et bien sûr en Italie, où l’on parle de café comme on parlerait de grands crus de vins, c’est une véritable institution. Le café italien est plus apprécié servi fort : en 1895 apparaît la première cafetière à pression de vapeur, appelée cafetière italienne ou moka, un substitut au café filtre.
+                     ...</p>
+                 <a href="#" class="liresuite"> >> Lire la suite...</a>
+                
+            </article>
+
+        </section>
+
+        <!-- les partenaires -->
+
+        <section class="partenaires">
+            <h1>Sponsors</h1>
+                <ul>
+                        <li class="container" ><a href="https://www.cartenoire.fr/"><img src="./dist/img/cartenoireFichier 2.png" class="image" alt=""> </a> </li>
+                        <li class="container"><a href="https://www.cafegrandmere.fr/"><img src="./dist/img/grandmereFichier 3.png" class="image"  alt=""> </a> </li>
+                        <li class="container"><a href="https://www.lavazza.fr/fr.html"><img src="./dist/img/lavazzaFichier 5.png" class="image" alt=""> </a> </li>
+                        <li class="container"><a href="https://www.lorespresso.com/fr-fr/"><img src="./dist/img/lorFichier 7.png" class="image" alt=""> </a> </li>
+                    </ul>
+
+
+        </section>
+     </div>
+        <!-- Pied de page -->
+        <footer>
+          <div class="page">
+           <section class="gmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10527.482122727342!2d2.111920416355147!3d48.72706550547227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67fbafdbf3dbd%3A0xb54aad41b7af9450!2sFerme+Du+Bel+Air!5e0!3m2!1sfr!2sfr!4v1537794050881"
+                 width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+
+            <section class="newsletter"  >
+                
+                <form action="">
+                    <!-- <p>Veuillez remplir le formulaire afin de vous inscrire à notre Newsletter.</p>  
+                    <p>Prénom</p>
+                    <p><input type="text" name="Prenom" ></p>
+                    <p>Nom</p>
+                    <p><input type="text" name="Nom" ></p>
+                    <p>Email</p>
+                    <p><input type="email" ></p>
+                    <p><input type="submit" value="Envoyer" ></p>
+                    -->
+                <fieldset>
+                    <legend>Newsletter</legend>
+                    <input type="text" name="Prenom" placeholder="Votre prénom" ><br><br>
+                    <input type="text" name="Nom" placeholder="Votre Nom" > <br><br>
+                    <input type="text" name="email" placeholder="Votre email" > <br><br>
+                    <input type="submit" value="M'inscrire" >
+
+                </fieldset>
+
+
+                </form>
+            </section>
+
+            <section class="contact"  >
+                <h3>Contactez-nous</h3>
+                <address>
+                    <strong>Le Café</strong> <br> <br>
+                    <a href="tel:+33143434343">tel: 01.43.43.43.43</a> <br>
+                    3 rue de la bastille <br>
+                    78190 Trappes <br>
+                    <a href="mailto:">lecafé@mail.fr</a> <br> 
+                </address>
+                
+            </section>
+          </div>   
+        </footer>
+
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+/*-----------------------------
+            section
+----------------------------*/
+
+    
+
+ #PROJECTEUR{
+    position: absolute;
+    width: 100%;
+    height: 28%;
+  
+   
+}
+
+section{
+    
+    /*dimension et positionnement*/
+    width: 100%;
+    float: left;
+ 
+    aside{
+        float: left;
+        width: 48%;
+        box-sizing: border-box;
+        padding: 1rem;
+        
+        img{
+            max-width: 100%;
+            border: $color-primary solid;
+        }
+    }
+    article{
+        float: left;
+        width: 50%;
+        padding: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: $ff-primary;
+        font-size: 1.5rem;
+        color: aliceblue;
+    
+    }
+    h2{
+        color: $color-primary;
+        font-family: $ff-primary;
+        text-shadow:1px 1px  $color-secondary;
+    }
+    .liresuite{
+        text-decoration: none;
+        color: $color-primary;
+        border: 1px solid,
+    }
+}
+
+.partenaires{
+    background-color: #764234;
+    h1{
+        color: $color-primary;
+        margin-left: 1rem;
+        font-family: $ff-primary;
+    }
+
+    ul{
+            
+        li{
+            display: inline-block;
+            margin-bottom: 1rem;
+            opacity: 1;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            &:hover {
+                opacity: 0.3;
+              }
+            a{
+               
+                padding: 2rem 2rem;
+                
+            }
+        } 
+    }
+
+  
+
+
+}
+
+
+

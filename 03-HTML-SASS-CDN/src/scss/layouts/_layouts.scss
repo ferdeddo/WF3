@@ -1,0 +1,29 @@
+/*---------------------------------------------------
+    Je souhaite changer la couleur du fond de ma page
+---------------------------------------------------*/
+html{
+    font-size: 62.5%;
+    /*1rem=10px*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../../../dist/img/bg.svg);
+    background-size: cover;
+    width: 100%;
+    
+}
+
+
+.page {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: $color-secondary;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    }
