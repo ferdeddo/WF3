@@ -443,7 +443,6 @@ footer {
   border-top-style: solid;
   border-top-width: medium;
   background-color: #231f20;
-  padding: 2rem;
   /* Ma newsletter */
 }
 
@@ -523,6 +522,17 @@ footer address strong {
   font-size: 2rem;
   font-family: 'Chicle', cursive;
   font-style: normal;
+}
+
+footer .i {
+  margin-left: 1.3rem;
+}
+
+footer .i i {
+  margin-right: 1rem;
+  color: #FFF;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 .phrase_accroche {

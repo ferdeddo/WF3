@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <!-- permet de préciser l'encodage de la page, pour les accents -->
     <meta charset=utf-8>
 
     <!-- j'importe ma feuile de style.css compilée depuis SCSS -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
+
+    <!-- j'importe le fontAwesom, qui permet d'inclure des icones à partir d'une bibliotheque en-ligne. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
 
     <!-- Titre de ma page -->
     <title>Atelier 03- HTML-SASS-CDN</title>
@@ -31,7 +37,7 @@
         <!-- bannière et barre de navigation -->
         <header>
            <a href="index.html"> 
-               <img src="./dist/img/logoCafé.svg"  width="160" height="160" alt="logo erwi">
+               <img src="./dist/img/logoCafé.svg"  width="160" height="160" alt="logo erwi" class="animation">
            </a>
           
            <nav>
@@ -77,7 +83,7 @@
         <!-- les partenaires -->
 
         <section class="partenaires">
-            <h1>✌ Sponsors</h1>
+            <h1><i class="fa fa-thumbs-o-up" style="font-size:36px"></i> Sponsors</h1>
                 <ul>
                         <li class="container" ><a href="https://www.cartenoire.fr/"><img src="./dist/img/cartenoireFichier 2.png" class="image" alt=""> </a> </li>
                         <li class="container"><a href="https://www.cafegrandmere.fr/"><img src="./dist/img/grandmereFichier 3.png" class="image"  alt=""> </a> </li>
@@ -123,13 +129,20 @@
 
             <section class="contact"  >
                 <h3>Contactez-nous</h3>
+            <div class="i">
+                <i class="fa fa-facebook-square" style="font-size:36px"></i>
+                <i class="fa fa-snapchat-square" style="font-size:36px"></i>
+                <i class="fa fa-twitter-square" style="font-size:36px"></i> <br>
+            </div>
                 <address>
-                    <strong>Le Café</strong> <br> <br>
+                    <strong>Le Café</strong> <br> 
+                   
                     <a href="tel:+33143434343">☎ 01.43.43.43.43</a> <br>
                     3 rue de la bastille <br>
                     78190 Trappes <br>
                     <a href="mailto:">✉ lecafé@mail.fr</a> <br>
-                    ღ(¯`◕‿◕´¯) ♫ ♪ ♫ Le Café ♫ ♪ ♫ (¯`◕‿◕´¯)ღ
+                    
+
                      
                 </address>
                 
