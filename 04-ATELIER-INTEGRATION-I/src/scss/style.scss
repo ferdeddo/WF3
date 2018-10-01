@@ -1,26 +1,30 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Chicle');
 
-// -- J'importe mes variable du fichier _variables.scss
+// -- HELPERS
 @import 'helpers/variables';
 @import 'helpers/mixins';
+@import 'helpers/utilities';
 
-// -- j'importe mes variables du fichier _base.scss
+// -- BASE
 @import 'base/base';
+@import 'base/typographie';
 
-// -- J'importe mon layout, ma structure principale
+// -- LAYOUT
 @import 'layouts/layouts';
 
-// -- j'importe mes components
+// -- COMPONENTS
 @import 'components/header';
+@import 'components/traduction';
+@import 'components/navigation';
+@import 'components/main-footer';
 @import 'components/footer';
+@import 'components/slider';
 
-@import 'components/topheader';
-
-// -- j'importe mes pages
+// -- PAGES
 @import 'pages/index'
 
 /*-----------------------------------------------------------------

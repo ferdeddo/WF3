@@ -1,28 +1,37 @@
-//variables
-/*
-    déclarer une variable en SASS
-    NB : C'est vous qui choisissez votre convention de nommage. Adopter une convention qui
-    qui soit claire et compréhensible rapidement.
-*/
 
-$color-primary:#CC9933;
-$color-secondary:#231f20;
 
-/*
-    je peux grace à la fonction "lighten" obtenir plusieurs variations de couleurs plus claire.
-    --
-    La fonction "darken" me permet de faire la même chose mais en sens inverse.
-*/
+// -- VARIABLES
 
-/*$clr-gray-base: #000;
-$clr-gray-dark: lighten($clr-gray-base, 20%);
-$clr-gray: lighten($clr-graybase, 50%);
-$clr-gray-light: lighten($clr-graybase, 70%);
-$clr-gray-lighter: lighten($clr-graybase, 90%);
-$clr-gray-lightest: lighten($clr-graybase, 95%);
-*/
-//varibles Fonts
+$blue: #3060A7;
+$orange:#FE3626;
+$orange--dark: #FE372A;
+$yellow: #BC8242;
+$green: #08A640;
+$white: #FFFFFF;
+$black: #000;
 
-$ff-primary: 'Ubuntu', sans-serif;
-$ff-secondary: 'Roboto Condensed', sans-serif;
+// -- Gray
+$gray : #CCCCCC;
+$gray--light: #BBBBBB;
+$gray--dark: #2A2A2A;
+
+// -- Font Size
+
+$text--size-largest: 3rem;
+$text--size-larger: 2.5rem;
+$text--size-large: 2rem;
+$text--size-medium: 1.8rem;
+$text--size-default: 1.6rem;
+$text--size-small: 1.4rem;
+$text--size-smaller: 1.3rem;
+$text--size-smallest: 1.2rem;
+
+$h1 : $text--size-largest;
+$h2 : $text--size-larger;
+$h3 : $text--size-large;
+
+// -- Fonts
+
+$ff-primary: 'Roboto Condensed', sans-serif;
+$ff-secondary: Arial, Helvetica, sans-serif;
 

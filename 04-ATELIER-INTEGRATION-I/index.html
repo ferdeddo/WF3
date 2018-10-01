@@ -1,83 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 
     <!-- permet de préciser l'encodage de la page, pour les accents -->
     <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">;
 
-    <!-- permet -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">;
-
-    <!-- j'importe ma feuile de style.css compilée depuis SCSS -->
+    <!-- feuille de style.css -->
     <link rel="stylesheet" href="./dist/css/style.min.css">
 
-    <!-- j'importe le fontAwesom, qui permet d'inclure des icones à partir d'une bibliotheque en-ligne. -->
+    <!-- FontAwesom -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Titre de ma page -->
     <title>Atelier 04- INTEGRATION</title>
 </head>
 
-<!--dans"body",le contenu de notre page-->
-<body>
+<body class="l-page">
     
-        <!--##### En-tête du site  ####-->
-        <div class="phrase_accroche">
-          <p >Découvrir les Antilles en profondeur, consitituez votre séjour à la carte incluant <u>l'hébergement, les petits déjeuners et les repas</u> du soir à la mode antillaise.</br>
-             Rencontrez des habitants authentiques et conviviaux, vivez en immersion la vie antillaise, mais <u>que demander de mieux</u> pour le véritable voyageur qui est en vous ?</p>
-        </div>
-
-        <!-- barre de navigation -->
-       <div class="page">
-        <header>
-         <nav >
-            <img src="./dist/img/drapeaux.png" alt="languages">
+        <main class="l-page__main">
+    
+          <p class="l-page__titre">Découvrir les Antilles en profondeur, consitituez votre séjour à la carte incluant <span class="u-underline">l'hébergement,
+               les petits déjeuners et les repas</span> du soir à la mode antillaise.</br>
+             Rencontrez des habitants authentiques et conviviaux, vivez en immersion la vie antillaise, 
+             mais <span class="u-underline">que demander de mieux</span> pour le véritable voyageur qui est en vous ?</p>
         
-            <ul >
-                    <li class="current"><a href="#"> Accueil </a></li>
-                    <li><a href="#">Découvrir Baya Tropic </a></li>
-                    <li class=hot><a href="#">Débuter mon séjour </a></li>
-                    <li><a href="#">Nos partenaires </a></li>
-                    <li><a href="#">Contact </a></li>
-            </ul>
-         </nav>
-        </header>
-        </div>
-
-        <div class="page">
-        <section >
-            <div id="PROJECTEUR">
-                <img src="./dist/img/logo.png" class="logo" alt="LOGO">
-                
-                <ul>
-                        <li><a href="#">Je compose mon séjour en Martinique <img src="./dist/img/main.png" alt=""> </a><p> Chez un ou plusieurs habitant</p></li>
-                        <li><a href="#">Je réserve une ou plusieurs activités </a><p> Découvrez nos offres exceptionnelles</p></li>
-                        <li><a href="#">Je réserve un véhicule </a><p> Découvrez nos offres exceptionnelles</p></li>
-                        <li><a href="#">Le Baya service </a><p> Découvrez nos offres exceptionnelles</p></li>                   
-                </ul>
+        <!--HEADER-->
+        
+        <header class="c-header l-page__header">
+            <!-- TRADUCTION -->
+            <div class="c-traduction c-header__traduction">
+                <p class="c-traduction__titre"> Language :</p>
+                <a class="c-traduction__link" href="#" title="français">FR</a>
+                <a class="c-traduction__link" href="#" title="English" >EN</a>
             
             </div>
 
-            <div class="bottomsection">
-                <div class="fleurlys">
-                    <img src="./dist/img/FleurLys.png" alt="">
+            <!-- NAVIGATION | HAUT A DROITE -->
+            <nav class="c_main-nav c-header__nav">
+              <ul class="c-main-nav__list" >
+                    <li class="c-main-nav__item c-main-nav__item--current"><a class="c-main-nav__link" href="#"> Accueil </a></li>
+                    <li class="c-main-nav__item"><a class="c-main-nav__link" href="#">Découvrir Baya Tropic </a></li>
+                    <li class="c-main-nav__item c-main-nav__item--current"><a class="c-main-nav__link" href="#">Débuter mon séjour </a></li>
+                    <li class="c-main-nav__item"><a class="c-main-nav__link" href="#">Nos partenaires </a></li>
+                    <li class="c-main-nav__item"><a class="c-main-nav__link" href="#">Contact </a></li>
+              </ul>
+            </nav>
+        </header>
+        
+        
+        <!-- SLIDER -->
+        <div class="c-slider l-page__slider">
+
+            <!-- SLIDE -->
+            <img class="c-slider__slide" src="./dist/img/projecteur.jpg" alt="">
+        
+            <!-- MENU -->
+            <nav class="c-slider-nav c-slider__nav">
+
+                <!-- LOGO  -->
+                <img class="c-slider-nav__logo" src="./dist/img/logo.png" class="logo" alt="LOGO">
+                
+                <!-- NAVIGATION -->
+                <ul class="c-slider-nav__list">
+                        <li class="c-slider-nav__item"><a class="c-slider-nav__link" href="#">Je compose mon séjour en Martinique </a><br> <span class="c-slider-nav__description">Chez un ou plusieurs habitant</span></li>
+                        <li class="c-slider-nav__item"><a href="#">Je réserve une ou plusieurs activités </a><span class="c-slider-nav__description"> Découvrez nos offres exceptionnelles</span></li>
+                        <li class="c-slider-nav__item"><a href="#">Je réserve un véhicule </a><span class="c-slider-nav__description"> Découvrez nos offres exceptionnelles</span></li>
+                        <li class="c-slider-nav__item"><a href="#">Le Baya service </a><span class="c-slider-nav__description"> Découvrez nos offres exceptionnelles</span></li>                   
+                </ul>
+            
+            </nav>
+        </div>
+
+        <!-- MAIN FOOTER -->
+            <footer class="c-main-footer l-page__footer">
+
+                <!-- SEPARATEUR -->
+                <div class="c-main-footer__separateur">
+                    <img src="./dist/img/FleurLys.png" alt="fleurlys">
                 </div>
-                <div>
-                    <p>Découvrir les Antilles en profondeur, constituer votre séjour à la carte incluant l’hébergement, les petits déjeuners et les repas du soir à la mode antillaise.</p>
-                    <P>Rencontrer des habitants authentiques et conviviaux, vivez en immersion la vie antillaise, mais que demander de mieux pour le véritable voyageur qui est en vous ?</p>
-                        <ul>
+
+                <!-- COMPOSER MON DEJEUNER -->
+                <div class="c-composer-sejour c-main-footer__content">
+                    <p class="c-composer-sejour__desc ">Découvrir les Antilles <span class="c_composer-sejour__desc--highlight"> en profondeur</span>, constituer votre <span class="c_composer-sejour__desc--highlight">séjour à la carte</span> 
+                        incluant <span class="u-underline">l’hébergement, les petits déjeuners et les repas</span> du soir <span class="c_composer-sejour__desc--highlight"> à la mode antillaise.</span></br>
+                        Rencontrer <span class="c_composer-sejour__desc--highlight">des habitants authentiques</span> et conviviaux, vivez en <span class="c_composer-sejour__desc--highlight">immersion</span> la vie antillaise, 
+                        mais <span class="u-underline">que demander de mieux</span> pour le véritable voyageur qui est en vous ?</p>
+
+                    <ul>
                                 <li> <img src="./dist/img/fleche.png" alt=""> </li>
                                 <li><a href="#">COMMENCER A COMPOSER MON SEJOUR <img src="./dist/img/main.png" alt="curseur"> </a></li>
                                 <li> <img src="./dist/img/fleche.png" alt=""> </li> 
                                          
-                        </ul>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-    </div>    
+            </footer>
         
-        <footer>
+    </main>
+    <footer>
             <section>
                 <H1>CONTACTEZ-NOUS</H1>
                 <a href="">0596 56 42 20</a><br>
@@ -137,9 +157,6 @@
          
                  
         </footer>
-
-
-
     
     
 </body>

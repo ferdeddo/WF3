@@ -1,28 +1,19 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css?family=Chicle");
-/*
-    déclarer une variable en SASS
-    NB : C'est vous qui choisissez votre convention de nommage. Adopter une convention qui
-    qui soit claire et compréhensible rapidement.
-*/
-/*
-    je peux grace à la fonction "lighten" obtenir plusieurs variations de couleurs plus claire.
-    --
-    La fonction "darken" me permet de faire la même chose mais en sens inverse.
-*/
-/*$clr-gray-base: #000;
-$clr-gray-dark: lighten($clr-gray-base, 20%);
-$clr-gray: lighten($clr-graybase, 50%);
-$clr-gray-light: lighten($clr-graybase, 70%);
-$clr-gray-lighter: lighten($clr-graybase, 90%);
-$clr-gray-lightest: lighten($clr-graybase, 95%);
-*/
-/*------------------------------------*/
-/*            ~ MIXINS ~              */
-/*------------------------------------*/
+/* ----------------------------------------- */
+/*                ~ MIXINS ~                 */
+/* ----------------------------------------- */
+.u-underline {
+  text-decoration: underline;
+}
+
+.relative {
+  position: relative;
+}
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -359,9 +350,37 @@ template {
   display: none;
 }
 
-/*---------------------------------------------------
-    Je souhaite changer la couleur du fond de ma page
----------------------------------------------------*/
+h1, h2, h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 html {
   font-size: 62.5%;
   /*1rem=10px*/
@@ -372,71 +391,56 @@ html {
           box-sizing: border-box;
 }
 
-body {
-  background: url(../../../dist/img/fond.jpg);
+ul li {
+  margin: 0%;
+  padding: 0%;
+}
+
+.l-page {
+  background: url(../img/fond.jpg) no-repeat;
   background-size: cover;
+}
+
+.l-page__main {
   width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
-.page {
-  width: 100%;
-  max-width: 1300px;
-  margin: auto;
-  background: url(../../../dist/img/projecteur.jpg);
-}
-
-header {
-  width: 100%;
-  height: 5rem;
-}
-
-header nav {
-  width: 1300px;
-  margin: auto;
-  height: 5rem;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
-  background-image: linear-gradient(180deg, #ffffff 0%, #dddddd 100%);
-}
-
-header nav img {
-  float: left;
-  margin-left: 15rem;
-  margin-top: 1.5rem;
-}
-
-header nav ul {
-  float: left;
-  margin-top: 1rem;
-  margin-left: 21rem;
-}
-
-header nav ul li {
-  display: inline-block;
-  padding-right: 1.5rem;
-  line-height: 3rem;
-  font-family: 'Roboto', sans-serif;
+.l-page__titre {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: 1.3rem;
   text-align: center;
-  font-size: 1.6rem;
 }
 
-header nav ul li a {
-  color: black;
-  text-decoration: none;
+.l-page__header {
+  width: 100%;
+  height: 5rem;
+  float: left;
 }
 
-header nav ul li a:hover {
-  color: #3060a7;
-  font-weight: bold;
+.c-header {
+  background-color: #BBBBBB;
+  /* fallback color if gradients are not supported */
+  /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  /* For Firefox (3.6 to 15) */
+  /* For old Opera (11.1 to 12.0) */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#BBBBBB));
+  background-image: linear-gradient(to bottom, #FFFFFF, #BBBBBB);
+  /* Standard syntax; must be last */
+  -webkit-box-shadow: 0px 0px 10px #BBBBBB;
+  box-shadow: 0px 0px 10px #BBBBBB;
 }
 
-.current a {
-  color: #3060a7;
+.c-header__traduction {
+  width: 25%;
+  float: left;
 }
 
-.hot a {
-  color: red;
+.c-header__nav {
+  width: 75%;
+  float: right;
 }
 
 /*---------------------------------------------------
@@ -446,14 +450,6 @@ header nav ul li a:hover {
 footer {
   width: 100%;
   float: left;
-}
-
-.phrase_accroche {
-  font-size: 1.3rem;
-  text-align: center;
-  color: #fafafa;
-  line-height: 1.6rem;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*-----------------------------
