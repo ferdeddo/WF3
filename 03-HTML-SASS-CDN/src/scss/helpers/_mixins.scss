@@ -1,0 +1,8 @@
+/*------------------------------------*/
+/*            ~ MIXINS ~              */
+/*------------------------------------*/
+
+@mixin linear-gradient ($from, $to) {
+    background-image: linear-gradient(to bottom, #fff, #EEE);
+    
+}

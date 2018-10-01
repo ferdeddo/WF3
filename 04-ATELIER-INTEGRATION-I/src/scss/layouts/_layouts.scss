@@ -1,0 +1,28 @@
+/*---------------------------------------------------
+    Je souhaite changer la couleur du fond de ma page
+---------------------------------------------------*/
+html{
+    font-size: 62.5%;
+    /*1rem=10px*/
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../../../dist/img/fond.jpg);
+    background-size: cover;
+    width: 100%;
+    
+}
+
+
+.page {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    background: url(../../../dist/img/projecteur.jpg);
+
+
+    }

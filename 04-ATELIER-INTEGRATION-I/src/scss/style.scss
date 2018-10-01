@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Chicle');
+
+// -- J'importe mes variable du fichier _variables.scss
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+// -- j'importe mes variables du fichier _base.scss
+@import 'base/base';
+
+// -- J'importe mon layout, ma structure principale
+@import 'layouts/layouts';
+
+// -- j'importe mes components
+@import 'components/header';
+@import 'components/footer';
+
+@import 'components/topheader';
+
+// -- j'importe mes pages
+@import 'pages/index'
+
+/*-----------------------------------------------------------------
+        Dans le cas où les sections dans footer n'ont pas de class
+--------------------------------------------------------------------
+
+footer {
+    /* -- Dimension & Positionnement -- *//*
+    width: 100%;
+    float: left;
+    border-top-style: solid;
+    border-top-width: medium;
+    background-color: #231F20;
+    padding: 2rem;
+}
+*/
+
+/* Ma div gmap *//*
+
+footer section:first-child {
+    width: calc(100% / 3);
+    float: left;
+    height: 200px;
+}
+
+*/
+/* Ma newsletter *//*
+
+footer section:nth-child(2) {
+    width: calc( (100% / 3) - 4rem);
+    margin-left: 4rem;
+    float: left;
+}
+
+footer section:nth-child(2) fieldset {
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    border: .2rem solid #FFF;
+    color: #FFF;
+    height: 160px;
+}
+
+form input {
+    width: calc(100% - 2rem);
+    height: 2.5rem;
+    border: 0;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    /* box-sizing: border-box; *//*
+}
+
+form input[type=submit] {
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:  rgb(255, 187, 0);
+    border-radius: 5px;
+    margin-top: 1rem;
+    
+}
+
+*/
+/* Coordonnées de contact */
+/*
+footer section:last-child {
+    width: calc(100% / 3);
+    float: left;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+footer section:last-child h3 {
+    text-align: center;
+    font-weight: normal;
+    color: #FFF;
+    font-size: 1.9rem;
+}
+
+footer address {
+    color: #FFF;
+    font-style: normal;
+    text-align: center;
+}
+
+footer address strong {
+    font-size: 2rem;
+}
+
+footer address a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+footer address a:hover {
+    text-decoration: underline;
+}
+*/  
