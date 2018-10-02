@@ -1,2 +1,11 @@
+.c-slider {
+    &__nav {
+        width: 34rem;
+        position: absolute;
+        top: 0;
+        left: 17rem;
+        @include linear-gradient($white, $gray--light);
 
+    }
+}
 

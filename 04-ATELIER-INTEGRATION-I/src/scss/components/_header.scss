@@ -1,12 +1,14 @@
 .c-header {
-    @include linear-gradient($white, $gray--light);
-    @include box-shadow(0px 0px 10px $gray--light);
+    @include linear-gradient($white, $gray--dark);
+    @include box-shadow(0px 0px 10px $gray--dark);
+    position: relative;
+    z-index: 1;
     &__traduction {
-        width: 25%;
+        width: auto;
         float: left;
     }
     &__nav {
-        width: 75%;
+        width: auto;
         float: right;
         
     }

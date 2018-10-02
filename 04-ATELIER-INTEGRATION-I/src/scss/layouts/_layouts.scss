@@ -33,7 +33,12 @@ ul li{
         height: 5rem;
         float: left;
     }
-    &__slider{}
+    &__slider{
+        width: 100%;
+        height: 65rem;
+        
+        overflow: hidden;
+    }
     &__footer{}
 
 }

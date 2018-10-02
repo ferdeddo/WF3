@@ -1,0 +1,67 @@
+// -- NAVIGATION HAUT
+.c-main-nav{
+    $self: &; //.c-main-nav
+
+    &__list{
+        margin-right: 17rem;
+    }
+    &__item{
+        display: inline-block;
+        margin: 0 1rem;
+        &:nth-child(3) #{$self}__link{
+            color: $orange;
+        }
+        // #{ self } -> pour appeler la variable.
+        &--current #{ $self }__link { 
+            color: $blue !important;
+        }
+    }
+    &__link{
+        font-family: $ff-primary;
+        font-size: $text--size-default;
+        color: $gray--dark;
+        line-height: 3rem;
+    }
+}
+
+// -- NAVIGATION SLIDER
+
+.c-slider-nav{
+    $self: &;
+    text-align: center;
+    &__logo {
+        margin: 2rem 0;
+    }
+    
+    &__item {
+        list-style-type: none;
+        width: 100%;
+        padding: 1rem 0;
+        @include linear-gradient($white, $gray--light);
+        &:nth-child(1)__link{
+            color: $orange--dark;
+        }
+        &::nth-child(2)__link{
+            color: $orange--dark;
+        }
+        &::nth-child(3)__link{
+            color: $orange--dark;
+        }
+        &::nth-child(4)__link{
+            color: $orange--dark;
+        }
+    }
+    
+    &__link {
+        font-family: $ff-primary;
+        font-size: $text--size-medium;
+
+    }
+    &__description {
+        font-family: $ff-primary;
+        font-size: $text--size-small;
+        font-style: italic;
+        font-weight: 300;
+
+    }
+}
