@@ -1,19 +1,17 @@
-
-
-// -- VARIABLES
-
+// -- Colors
 $blue: #3060A7;
-$orange:#FE3626;
+$orange: #FE3626;
 $orange--dark: #FE372A;
+$orange--light: #FEBEB9;
 $yellow: #BC8242;
 $green: #08A640;
 $white: #FFFFFF;
-$black: #000;
+$black: #000000;
 
 // -- Gray
-$gray : #CCCCCC;
+$gray: #CCCCCC;
 $gray--light: #BBBBBB;
-$gray--dark: #2A2A2A;
+$gray--dark: #202020;
 
 // -- Font Size
 
@@ -30,9 +28,6 @@ $h1 : $text--size-largest;
 $h2 : $text--size-larger;
 $h3 : $text--size-large;
 
-// -- Fonts
-
+// -- Font Family
 $ff-primary: 'Roboto Condensed', sans-serif;
 $ff-secondary: Arial, Helvetica, sans-serif;
-
-

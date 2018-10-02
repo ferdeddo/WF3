@@ -1,17 +1,4 @@
 
-html{
-    font-size: 62.5%;
-    /*1rem=10px*/
-}
-
-* {
-    box-sizing: border-box;
-}
-
-ul li{
-    margin: 0%;
-    padding: 0%;
-}
 
 .l-page {
     background: url(../img/fond.jpg) no-repeat;
@@ -20,7 +7,7 @@ ul li{
     &__main {
         width: 100%;
         max-width: 130rem;
-        margin: 0 auto;
+        margin: 6rem auto;
     }
     &__titre {
         font-family: $ff-secondary;
@@ -36,10 +23,13 @@ ul li{
     &__slider{
         width: 100%;
         height: 65rem;
-        
+        float: left;
         overflow: hidden;
     }
-    &__footer{}
+    &__footer{
+        width: 100%;
+        float: left;
+    }
 
 }
 

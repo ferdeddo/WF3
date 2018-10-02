@@ -10,6 +10,14 @@
     background-image:         linear-gradient(to bottom, $from, $to); /* Standard syntax; must be last */
 }
 
+@mixin radial-gradient($from, $to) {
+    background-image: -webkit-radial-gradient(circle at center, $from 0%,  $to 100%);
+    background-image: -moz-radial-gradient(circle at center, $from 0%,  $to 100%);
+    background-image: -o-radial-gradient(circle at center, $from 0%,  $to 100%);
+    background-image: -ms-radial-gradient(circle at center, $from 0%,  $to 100%);
+    background-image: radial-gradient(circle at center, $from 0%,  $to 100%);
+}
+
 @mixin box-sizing($box-model) {
     -webkit-box-sizing: $box-model; // Safari <= 5
     -moz-box-sizing: $box-model; // Firefox <= 19
@@ -26,4 +34,8 @@
     -webkit-box-shadow: $params;
        -moz-box-shadow: $params;
             box-shadow: $params;
-  }
+}
+
+@mixin transition {
+    transition: 0.1s ease-in-out;
+}

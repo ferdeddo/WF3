@@ -10,22 +10,26 @@
 @import 'helpers/utilities';
 
 // -- BASE
+
 @import 'base/base';
 @import 'base/typographie';
 
 // -- LAYOUT
 @import 'layouts/layouts';
 
+// -- OBJECTS
+@import 'objects/button';
+
 // -- COMPONENTS
 @import 'components/header';
 @import 'components/traduction';
 @import 'components/navigation';
-@import 'components/main-footer';
-@import 'components/footer';
 @import 'components/slider';
+@import 'components/main-footer';
+@import 'components/composer-sejour';
 
 // -- PAGES
-@import 'pages/index'
+
 
 /*-----------------------------------------------------------------
         Dans le cas où les sections dans footer n'ont pas de class

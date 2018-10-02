@@ -8,8 +8,8 @@
         float: left;
     }
     &__link{
-        margin: 1rem 0.2rem 0 0.2rem;
-        transition: 0.1s ease-in-out;
+        margin: 1.3rem 0.2rem 0 0.2rem;
+        @include transition;
         // -- Drapeau FR
         &:nth-child(2) {
             width: 28px;
