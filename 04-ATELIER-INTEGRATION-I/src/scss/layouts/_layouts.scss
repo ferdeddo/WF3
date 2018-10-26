@@ -4,6 +4,11 @@
     background: url(../img/fond.jpg) no-repeat;
     background-size: cover;
 
+    &--sejour{
+        background: url(../img/bgdecouvrir.jpg) no-repeat;
+        background-size: cover;
+    }
+
     &__main {
         width: 100%;
         max-width: 130rem;
