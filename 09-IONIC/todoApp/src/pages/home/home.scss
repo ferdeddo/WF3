@@ -1,0 +1,58 @@
+page-home {
+  /**
+    Changement des couleurs
+    pour les tâches finies.
+  **/
+
+  .bg{
+    background:  url("../assets/imgs/bg.png") no-repeat;
+    background-size: cover;
+  }
+ ion-header{
+   background-color: #8a4182;
+ }
+  ion-navbar{
+    border: solid map_get($colors, 'dokkan1');
+
+    p{
+      color: #007069;
+    }
+  }
+  //------------------------------------
+  .done + .item-inner > .input-wrapper {
+    color: map_get($colors, 'dark');
+    text-decoration: line-through;
+  }
+  .taskNB {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  //----------------------------------
+  .todo-calendar{
+    ion-icon{
+      font-size: 2.8rem;
+      color: map_get($colors, 'dark');
+
+    }
+  }
+  /**
+   *Règle le BUG du calendrier
+   *surANdroïd.
+  **/
+  .input-cover{
+    position: static;
+  }
+
+  .todo-note{
+    font-size: 0.9em;
+    span{
+      font-size: 0.8em;
+    }
+  }
+
+
+}
+
+
+

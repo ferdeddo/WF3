@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation de Formulaire en Jquery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="row mt-4">
+            <div class="col">
+                <h1 class="text-center">Contactez-nous</h1>
+            </div>
+        </header>
+
+        <section class="row">
+            <div class="col">
+
+                <form novalidate id="contact" class="form-horizontal">
+
+                    <!-- Nom -->
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" required
+                            class="form-control" id="nom"
+                            placeholder="Saisissez votre Nom">
+                        <div class="invalid-feedback">Vous devez saisir votre nom</div>
+                    </div>
+
+                    <!-- Prénom -->
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" required
+                            class="form-control" id="prenom"
+                            placeholder="Saisissez votre Prénom">
+                        <div class="invalid-feedback">Vous devez saisir votre prénom</div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" required
+                            class="form-control" id="email"
+                            placeholder="Saisissez votre Email">
+                        <div class="invalid-feedback">Vous devez saisir votre adresse email</div>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="form-group">
+                        <label for="tel">Téléphone</label>
+                        <input type="tel" required
+                            class="form-control" id="tel"
+                            placeholder="Saisissez votre Téléphone">
+                        <div class="invalid-feedback">Vous devez saisir votre numéro de téléphone</div>
+                    </div>
+
+                    <!-- Bouton de Soumission -->
+                    <div class="form-group">
+                    <button type="submit" 
+                        class="btn btn-primary btn-block">
+                        Envoyer ma demande
+                    </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Intégration de jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+     crossorigin="anonymous"></script>
+
+    <!-- Intégration de notre fichier JS -->
+    <script>
+        /* -----------------------------------------\
+        |           ~~~   LA CONSIGNE   ~~~         |
+        |                                           |
+        |   Créez un Formulaire HTML Bootstrap      |
+        |   avec les champs suivants :              |
+        |                                           |
+        |   Nom, Prénom, Email, Tel                 |
+        |                                           |
+        \------------------------------------------*/
+
+    /*
+     *  Valider son email
+     */
+
+     function validateEmail(email) {
+	    var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return regex.test(email);
+    }
+    
+    /**
+    * Valider son numéro de téléphone en FR
+    */
+	var validateTel = tel => {
+	var telReg = new RegExp("(0|\\+33|0033)[1-9][0-9]{8}");
+	return telReg.test(tel);
+    }
+
+
+
+    
+    // -- j'écoute la soumission du formulaire par mon utilisateur
+    $('#contact').submit(function(e){
+
+        // -- Stopper la redirection de la page
+        e.preventDefault();
+
+        // -- Réinitialisation des erreurs
+        $('#contact .is-valid').removeClass('is-valid');
+        $('#contact .is-invalid').removeClass('is-invalid');
+        $('#contact .alert-danger').remove();
+
+        // -- Je récupère les éléments à vérifier
+        const nom       =$('#nom');
+        const prenom    =$('#prenom');
+        const email     =$('#email');
+        const tel       =$('#tel');
+
+        // -- Validation du champ "Nom"
+        if( nom.val().length === 0){
+            nom.addClass('is-invalid'); 
+        }
+        else{
+            nom.addClass('is-valid'); 
+        }
+
+        // -- Validation du champ "Prénom"
+         if( prenom.val().length === 0){
+            prenom.addClass('is-invalid'); 
+        }
+        else{
+            prenom.addClass('is-valid'); 
+        }
+
+        // -- Validation du champ "email"
+        if( !validateEmail(email.val())) {
+            email.addClass('is-invalid'); 
+        }
+        else{
+            email.addClass('is-valid'); 
+        }
+        // -- Validation du champ "tel"
+        if( !validateTel(tel.val())){
+            tel.addClass('is-invalid'); 
+        }
+        else{
+            tel.addClass('is-valid'); 
+        }
+
+      // -- Comment je fais pour savoir si j'ai des erreurs de validation ?
+
+            if( $(this).find('.is-invalid').length === 0 ) {
+
+                $(this).replaceWith(`
+                    <div class="alert alert-success">
+                        Votre contact à bien été transmis !
+                        Nous vous répondrons dans les meilleurs délais 😉.
+                    </div>
+                `);
+
+            } else {
+
+                $(this).prepend(`
+                    <div class="alert alert-danger">
+                        Nous n'avons pas été en mesure de valider votre contact. Vérifiez vos informations  🙄.
+                    </div>
+                `);
+
+            }
+
+    });
+    </script>
+</body>
+</html>

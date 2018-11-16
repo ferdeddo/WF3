@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 1. Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- 2. Style.css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 3. html5shiv  :: exceptionnellement ce .js est placé en haut afin que la page s'affiche proprement pour les utilisateurs d'anciens navigateurs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <!-- 4. respondJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+    <title>La Vache !</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ultra" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+<body >
+    <main class="container-fluid">
+      <div class="row">
+        <!-- PROJECTEUR -->
+        <div class="col p-0 slider">
+            <img class="img-fluid slider__slid" 
+            src="./img/projecteur.jpg"
+             alt="vache">
+        </div><!--  /.Slider  -->
+        
+        <nav class="col-12 menu">
+            <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Accueil</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#NOS-VIDEOS" class="menu__link">Nos vidéos</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Nos Photos</a>
+                </li>
+            </ul>
+      </nav>
+     </div> <!-- /row -->
+
+      <!-- Nos Vidéos -->
+
+      <section class="row videos p-5" id="NOS-VIDEOS " >
+            <div class="container">
+                <div class="row">
+                     <div class="col-md videos__item" >
+                             <iframe   width="100%" height="315px" src="https://www.youtube.com/embed/vIjbnTlgpBo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                             
+                     <div class="col-md videos__item">
+                             <iframe width="100%" height="315px" src="https://www.youtube.com/embed/cQRnf_ycKoE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nos Photos -->
+        <section class="row galerie p-5" id="NOS-PHOTOS">
+            <div class="container galerie__container">
+                <div class="row galerie__row" >
+                    <div class=" col-md-6 order-md-1 galerie__col">
+                        <div class="row galerie__row">
+                                <div class="col-sm  galerie__item mb-5"  >
+                                    <img class="rounded img-fluid galerie__image" src="./img/angus.jpg" alt="angus">
+                                </div>
+                        
+                                <div class="col-sm galerie__item mb-5">
+                                    <img class="rounded img-fluid galerie__image" src="./img/bison.jpg"  alt="bison">
+                                </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-sm-12 col-md-6 order-md-2 galerie__col galerie__description">
+                            <h1 class="galerie__title"> LES VACHES</h1>
+                            <p>Vache est le nom vernaculaire donné à la femelle mammifère domestique de l'espèce Bos taurus, un ruminant appartenant à 
+                                la famille des bovidés, généralement porteur de cornes sur le front. Les individus mâles sont appelés taureaux et les jeunes,
+                                 veaux1. Une génisse ou vachette, 
+                                appelée aussi taure au Québec ou dans le Poitou, est une vache qui n'a pas vêlé. Le mot vache vient du latin vacca de même sens.</p>
+                            </div>
+                    
+                    <div class="col-12 galerie__col order-md-3">
+                        <div class="row">
+                                <div class="mb-5 mb-md-0 col-sm-6 col-md-3 galerie__item" >
+                                        <img class="rounded img-fluid galerie__image" src="./img/charolaise.jpg"  alt="charolaise">
+                                </div>
+                    
+                                <div class="mb-5 mb-md-0 col-sm-6 col-md-3 galerie__item" >
+                                        <img class="rounded img-fluid galerie__image" src="./img/holstein.jpg"  alt="holstein">
+                                </div>
+                    
+                                <div class="mb-5 mb-md-0 col-sm-6 col-md-3 galerie__item" >
+                                        <img class="rounded img-fluid galerie__image" src="./img/red-polls.jpg"  alt="red-polls">
+                                </div>
+                    
+                                <div class="mb-5 mb-md-0 col-sm-6 col-md-3 galerie__item" >
+                                        <img class="rounded img-fluid galerie__image" src="./img/watusi.jpg"  alt="watusi">
+                                </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+      <!-- Nos Vidéos 2-->
+
+      <section class="row videos--bottom p-5" >
+            <div class="container">
+                <div class="row">
+                     <div class="col-md videos__item" >
+                             <iframe   width="100%" height="315px" src="https://www.youtube.com/embed/vIjbnTlgpBo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                             
+                     <div class="col-md videos__item">
+                             <iframe width="100%" height="315px" src="https://www.youtube.com/embed/cQRnf_ycKoE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+                <div class="row">
+                    <div class="col text-center p-2">
+                       <p > <i class="fa fa-copyright"></i> Ferdeddo Corporation</p>
+                    </div>
+                </div>
+        </footer>  
+        
+    </main>
+
+</body>
+</html>

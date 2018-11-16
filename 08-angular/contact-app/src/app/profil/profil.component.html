@@ -1,0 +1,17 @@
+<div class="jumbotron" *ngIf="contactProfil">
+  <h1 class="display-4">{{ contactProfil.name }}</h1>
+  <p class="lead">{{ contactProfil.username }}</p>
+  <hr class="my-4 ">
+  <input type="text"
+         (change)="contactModified()"
+         [(ngModel)]="contactProfil.name"
+         class="form-control">
+</div>
+<!--
+Sinon j'affiche une valeur par défaut.
+-->
+<div class="jumbotron" *ngIf="!contactProfil">
+  <h1 class="display-4">Bienvenue !</h1>
+  <p class="lead">Choisissez un contact...</p>
+  <hr class="my-4">
+</div>

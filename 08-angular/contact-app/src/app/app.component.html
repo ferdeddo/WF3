@@ -1,8 +1,9 @@
-
 <!--
-Démonstration :
-
-<h1> {{ unCotact.name + ' ' + unContact.email }}</h1>
+  Démonstration :
+  <h1>
+    {{ unContact.id + ' - ' +  unContact.name}}
+    <small>{{ unContact.username }}</small>
+  </h1>
 -->
 
 <div class="container">
@@ -23,46 +24,35 @@ Démonstration :
   <!-- Content | Corps de l'application -->
   <div class="row">
 
-    <!-- lister mes contacts-->
+    <!-- Lister les contacts -->
     <div class="col-sm-4">
-      <div class="list-group ">
+      <div class="list-group">
         <a *ngFor="let contact of mesContacts"
            (click)="showContact(contact)"
            [class.active]="contact === contactActif"
            href="javascript:void(0)"
-           class="list-group-item list-group-item-action ">
-          {{contact.name}}
+           class="list-group-item list-group-item-action">
+          {{ contact.name }}
         </a>
-      </div>
+      </div> <!-- /.list-group -->
+      <app-ajouter (unContactEstCree)="addContactToArray($event)"></app-ajouter>
+    </div> <!-- /.col-sm-4 -->
+
+    <!-- Afficher un Contact -->
+    <div class="col-sm-8">
+      <app-profil
+        (contactChanged)="saveContacts()"
+        [contactProfil]="contactActif"></app-profil>
     </div>
 
-    <!-- Afficher un Contact-->
-    <div class="col-sm-8">
-      <div class="jumbotron" *ngIf="contactActif">
-       <h1 class="display-4">{{ contactActif.name }}</h1>
-       <p class="lead">{{ contactActif.username }}</p>
-       <hr class="my-4 ">
-        <input type="text"
-               [(ngModel)]="contactActif.name"
-               class="form-control">
-      </div>
-      <!--
-      Sinon j'affiche une valeur par défaut.
-      -->
-      <div class="jumbotron" *ngIf="!contactActif">
-        <h1 class="display-4">Bienvenue !</h1>
-        <p class="lead">Choisissez un contact...</p>
-        <hr class="my-4">
-      </div>
-    </div>
   </div>
 
- <!-- <pre>
+  <!--<pre>
     {{ mesContacts | json }}
   </pre>-->
 
   <!-- Footer | Pied de page -->
   <footer class="text-center">
-    copyright &copy; 2018 - WF3 Trappes
+    Copyright &copy; 2018 - WF3 Trappes
   </footer>
 </div>

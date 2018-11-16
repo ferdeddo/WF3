@@ -1,0 +1,96 @@
+<ion-header >
+  <ion-navbar>
+    <ion-title text-center >
+      <p>Tâches</p>
+    </ion-title>
+    <ion-buttons end>
+      <span class="taskNB">
+        {{  tasks.length }}
+      </span>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg" padding>
+
+  <div padding *ngIf="tasks.length === 0">
+    <h5 text-center>
+      Aucune tâche pour le moment
+    </h5>
+  </div>
+
+
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let task of tasks">
+
+      <ion-item>
+        <ion-label>{{ task.title }}</ion-label>
+        <ion-checkbox
+          color="secondary"
+          [(ngModel)]="task.status"
+          [class.done]="task.status"
+          (ionChange)="saveOurTasks()"
+          [checked]="task.status">
+
+        </ion-checkbox>
+        <ion-note *ngIf="task.duedate" item-end class="todo-note">
+          <span>&Eacute;chéance</span><br>
+          {{task.duedate | moment}}
+        </ion-note>
+      </ion-item>
+
+      <ion-item-options side="right"
+        (ionSwipe)="deleteTask(task)">
+        <button ion-button
+                color="danger"
+                (click)="deleteTask(task)">
+          Supprimer
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+    <!--
+      AJOUTER UNE TÂCHE
+    -->
+
+    <ion-item *ngIf="active">
+
+      <ion-input
+        type="text"
+        [(ngModel)]="task.title"
+        (ionBlur)="saveTask()"
+        (keypress)="onKeyPress($event.key)"
+        placeholder="Ajouter une tâche...">
+
+      </ion-input>
+
+      <!--
+        AFFICHAGE DU DATETIME
+      -->
+      <button class="todo-calendar"
+              (click)="picker.open()"
+              ion-button item-left clear>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-datetime #picker
+                      doneText="Confirmer"
+                      cancelText="Annuler"
+                      [max]="date.getFullYear() + 10"
+                      [min]="date.toISOString()"
+                      [(ngModel)]="task.duedate"
+                      pickerFormat="DD/MM/YYYY"
+                      placeholder="DD/MM/YYYY">
+        </ion-datetime>
+
+      </button>
+
+
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+
+<!-- ctrl + alt + l   -> pour indenter le code-->
